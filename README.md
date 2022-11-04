@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+The Dog Volunteer app is a MERN stack application that provides a private platform for multiple users to coordinate communication and planning around specific events instantly and simultaneously. Communication is global and messages are date/time stamped. User and event data and message history are stored in MongoDB.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Users are prompted to signup or login to create their profile using their first and last names, an email address and a password. 
 
-## Available Scripts
+<img width="1349" alt="Screen Shot 2022-10-20 at 10 33 12 PM" src="https://user-images.githubusercontent.com/110048198/197097720-41fe1cad-6a00-4b8c-b693-373629fc73b3.png">
 
-In the project directory, you can run:
 
-### `npm start`
+The homepage is a wall of events; each event lists its title, date/time, and a hyper-linked text to "chat". 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img width="1351" alt="Screen Shot 2022-10-20 at 9 31 01 PM" src="https://user-images.githubusercontent.com/110048198/197097460-4da31fa9-6f7a-4b53-8aea-a85ea47eaad8.png">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+Each chat page hosts one event and displays event details, the list of users and a messaging panel. Multiple users can be loggedin simultaneously and post conversations in real time through websockets.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<img width="1348" alt="Screen Shot 2022-10-20 at 10 36 21 PM" src="https://user-images.githubusercontent.com/110048198/197098201-f88be3a6-9d50-45d9-ae49-8745d57e2829.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The app is hosted on Heroku for (Express) and Netlify for (React)--DEPLOY HERE: https://harmonious-biscochitos-b429e7.netlify.app/ and incorporates the technologies of the MERN-stack:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+MongoDB/Mongoose;
+Express;
+React;
+Node
 
-### `npm run eject`
+Additional technologies used: 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Socket.io .............axios..........
+json webtoken..........bcrypt.........
+bootstrap..............morgan
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The main/central Mongoose model used: ObjectId, this model converts objects into 12-byte ObjectId.
+My "favorite" Express controller method - Router to events.
+My "favorite" React component is "Callback Props" used for User-Forms (ie.handlesubmit).
+For client-side routing - frontend/browser/UI were handled in components folder.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+My biggest challenge is deployment because just when you think you're finished, you're not. It seems that each platform has its own issues that require trouble-shooting.
 
-## Learn More
+Key takeaways: Organize your workstation and remove unnecessary files. Work side-by-side with JS and CSS files.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+While user communication is global now, a private chat feature may be added in the future. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Enjoy! Happy Coding!
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
